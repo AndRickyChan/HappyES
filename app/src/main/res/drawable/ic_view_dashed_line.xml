@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <!--显示一条虚线，dashWidth为破折号宽度，dashGap为中间空白部分宽度-->
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/colorDividerLine"
+        android:dashGap="3dp"
+        android:dashWidth="3dp" />
+</shape>

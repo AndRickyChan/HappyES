@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6E9AC1</color>
+    <color name="colorPrimaryDark">#6791B6</color>
+    <color name="colorAccent">#6791B6</color>
+    <color name="windowBackground">#FFF5F5F5</color>
+
+    <!--单纯的颜色-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <!--文字的颜色-->
+    <!--标题颜色-->
+    <color name="colorTitle">#222222</color>
+    <!--内容颜色-->
+    <color name="colorContent">#666666</color>
+    <!--次级内容颜色-->
+    <color name="colorSubContent">#999999</color>
+    <!--编辑框提示文字颜色-->
+    <color name="colorTint">#dddddddd</color>
+    <!--线条颜色-->
+    <color name="colorDividerLine">#FFEEEEEE</color>
+</resources>

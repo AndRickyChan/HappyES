@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group_user">
+        <item
+            android:id="@+id/menu_my_attention"
+            android:icon="@drawable/ic_main_menu_attention"
+            android:title="@string/menu_left_navigation_my_attention" />
+        <item
+            android:id="@+id/menu_my_route"
+            android:icon="@drawable/ic_main_menu_my_route"
+            android:title="@string/menu_left_navigation_my_route" />
+        <item
+            android:id="@+id/menu_my_message"
+            android:icon="@drawable/ic_main_menu_my_message"
+            android:title="@string/menu_left_navigation_my_message" />
+    </group>
+    <group android:id="@+id/group_system">
+        <item
+            android:id="@+id/menu_setting"
+            android:icon="@drawable/ic_main_menu_setting"
+            android:title="@string/menu_left_navigation_setting" />
+    </group>
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/iv_user_header"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_default_user_portrait"
+        app:layout_marginLeftPercent="10%"
+        app:layout_marginTopPercent="15%" />
+
+    <TextView
+        android:id="@+id/tv_user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_user_header"
+        android:layout_marginTop="20dp"
+        android:text="幼稚·充斥青春"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_marginLeftPercent="10%" />
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ricky.happyes">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.HappyESApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--引导页-->
+        <activity android:name=".ui.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--主界面-->
+        <activity android:name=".ui.main.MainActivity" />
+        <!--设置-->
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:label="@string/title_setting" />
+        <!--关于-->
+        <activity
+            android:name=".ui.setting.about.AboutActivity"
+            android:label="@string/title_about" />
+        <!--意见反馈-->
+        <activity
+            android:name=".ui.setting.feedback.FeedBackActivity"
+            android:label="@string/title_feed_back" />
+        <!--我的消息-->
+        <activity
+            android:name=".ui.mine.mymsg.MyMessageActivity"
+            android:label="@string/menu_left_navigation_my_message" />
+        <!--登录-->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_login" />
+        <!--获取验证码-->
+        <activity
+            android:name=".ui.code.CodeActivity"
+            android:label="@string/title_code" />
+        <!--注册-->
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:label="@string/title_register" />
+        <!--重置密码-->
+        <activity
+            android:name=".ui.resetpass.ResetPassActivity"
+            android:label="@string/title_reset_pass" />
+    </application>
+
+</manifest>

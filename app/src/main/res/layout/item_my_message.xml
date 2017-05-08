@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/windowBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_common_press"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_message_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="一人饮酒醉"
+            android:textColor="@color/colorTitle"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_view_dashed_line"
+            android:layerType="software" />
+
+        <TextView
+            android:id="@+id/tv_message_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.25"
+            android:maxLines="4"
+            android:text="一人 我饮酒醉两眼 是独相随只求他日能双归娇女 我轻扶琴燕嬉 我紫竹林我痴情红颜心甘情愿千里把君寻说红颜 我痴情笑曲动 我琴声妙我轻狂高傲懵懂无知只怪太年少弃江山 忘天下斩断情丝我无牵挂千古留名传佳话两年征战已白发"
+            android:textColor="@color/colorContent"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_view_dashed_line"
+            android:layerType="software" />
+
+        <TextView
+            android:id="@+id/tv_message_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="2017-03-14 15:22"
+            android:textColor="@color/colorSubContent"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

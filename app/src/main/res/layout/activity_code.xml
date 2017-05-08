@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/layout_view_toolbar" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_marginLeftPercent="12%"
+            app:layout_marginRightPercent="12%"
+            app:layout_marginTopPercent="15%">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login_input"
+                android:ellipsize="end"
+                android:hint="@string/hint_login_phone"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@color/colorContent"
+                android:textColorHint="@color/colorTint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_input_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_login_input"
+                    android:ellipsize="end"
+                    android:hint="@string/hint_code_input_code"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/colorContent"
+                    android:textColorHint="@color/colorTint"
+                    android:textSize="14sp" />
+
+                <com.ricky.happyes.widgets.CountDownButton
+                    android:id="@+id/cdb_get_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/bg_get_code"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/text_btn_get_code"
+                    android:textColor="@color/color_get_code" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit_code"
+                style="@style/CommonBtnStyle"
+                android:layout_marginTop="24dp"
+                android:enabled="false"
+                android:text="@string/text_submit_code" />
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

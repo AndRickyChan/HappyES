@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_view_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_common_container"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_switch_push"
+                style="@style/SettingRelativeStyle">
+
+                <TextView
+                    style="@style/SettingTvStyle"
+                    android:text="@string/text_accept_push" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/tv_setting_accept_push"
+                    android:layout_width="wrap_content"
+                    android:background="@null"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+            <View
+                style="@style/CommonDividerStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_feed_back"
+                style="@style/SettingRelativeStyle">
+
+                <TextView
+                    style="@style/SettingTvStyle"
+                    android:text="@string/text_setting_feed_back" />
+
+                <ImageView style="@style/SettingRightImageStyle" />
+            </RelativeLayout>
+
+            <View
+                style="@style/CommonDividerStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_about"
+                style="@style/SettingRelativeStyle">
+
+                <TextView
+                    style="@style/SettingTvStyle"
+                    android:text="@string/text_setting_about" />
+
+                <ImageView style="@style/SettingRightImageStyle" />
+            </RelativeLayout>
+
+            <View
+                style="@style/CommonDividerStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_clear_cache"
+                style="@style/SettingRelativeStyle">
+
+                <TextView
+                    style="@style/SettingTvStyle"
+                    android:text="@string/text_setting_clear_cache" />
+
+                <TextView
+                    android:id="@+id/tv_cache_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="500KB"
+                    android:textColor="@color/colorContent"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_setting_log_out"
+            style="@style/CommonBtnStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/text_btn_logout" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
