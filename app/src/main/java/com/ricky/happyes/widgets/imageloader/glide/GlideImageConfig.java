@@ -15,7 +15,7 @@ public class GlideImageConfig extends ImageConfig {
     private int scaleType;
     private BitmapTransformation transformation;//glide进行图片形状变换
 
-    public GlideImageConfig(Builder builder) {
+    private GlideImageConfig(Builder builder) {
         this.cacheCategry = builder.cacheCategry;
         this.transformation = builder.transformation;
         this.url = builder.url;
