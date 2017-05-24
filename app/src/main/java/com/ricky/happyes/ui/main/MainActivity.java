@@ -22,14 +22,13 @@ import com.ricky.happyes.bean.UserBean;
 import com.ricky.happyes.ui.main.home.HomeFragment;
 import com.ricky.happyes.ui.main.notifications.NotificationsFragment;
 import com.ricky.happyes.ui.main.travel.TravelFragment;
-import com.ricky.happyes.ui.mine.mymsg.MyMessageActivity;
+import com.ricky.happyes.ui.mine.msg.MyMessageActivity;
 import com.ricky.happyes.ui.setting.SettingActivity;
 import com.ricky.happyes.util.AppManager;
 import com.ricky.happyes.util.ImageUtils;
 import com.ricky.happyes.util.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements BottomNavigationView.OnNavigationItemSelectedListener
         , NavigationView.OnNavigationItemSelectedListener, MainContract.View {

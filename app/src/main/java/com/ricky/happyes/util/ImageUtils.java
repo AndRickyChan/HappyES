@@ -3,7 +3,6 @@ package com.ricky.happyes.util;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.ricky.happyes.R;
 import com.ricky.happyes.widgets.imageloader.ImageLoaderUtils;
 import com.ricky.happyes.widgets.imageloader.glide.GlideCircleTransform;
@@ -61,8 +60,8 @@ public class ImageUtils {
     public void loadBannerImage(Context mContext, String url, ImageView mImageView) {
         mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
                 .url(url)
-                .errorImage(R.drawable.ic_default_user_portrait)
-                .placeholder(R.drawable.ic_default_user_portrait)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
                 .imageView(mImageView)
                 .scaleType(GlideScaleType.CENTER_CROP)
                 .build());
@@ -74,8 +73,8 @@ public class ImageUtils {
     public void loadHotTravelItemImage(Context mContext, String url, ImageView mImageView) {
         mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
                 .url(url)
-                .errorImage(R.drawable.ic_default_user_portrait)
-                .placeholder(R.drawable.ic_default_user_portrait)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
                 .imageView(mImageView)
                 .scaleType(GlideScaleType.CENTER_CROP)
                 .build());

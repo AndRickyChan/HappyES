@@ -1,7 +1,10 @@
 package com.ricky.happyes.ui.main.notifications;
 
+import android.content.Context;
+
 import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseFragment;
+import com.ricky.happyes.util.ToastUtils;
 
 /**
  * 公告
@@ -9,6 +12,10 @@ import com.ricky.happyes.base.BaseFragment;
  */
 
 public class NotificationsFragment extends BaseFragment<NotificationsPresenter> implements NotificationsContract.View {
+
+    private Context mContext;
+
+
     @Override
     public NotificationsPresenter getPresenter() {
         return new NotificationsPresenter(this);
@@ -21,11 +28,11 @@ public class NotificationsFragment extends BaseFragment<NotificationsPresenter> 
 
     @Override
     public void initEventAndData() {
-
+        mContext = getContext();
     }
 
     @Override
     public void showError(String msg) {
-
+        ToastUtils.toastShort(mContext, msg);
     }
 }

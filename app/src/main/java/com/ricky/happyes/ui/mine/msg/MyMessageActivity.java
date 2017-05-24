@@ -1,4 +1,4 @@
-package com.ricky.happyes.ui.mine.mymsg;
+package com.ricky.happyes.ui.mine.msg;
 
 import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -13,6 +13,7 @@ import com.chanven.lib.cptr.recyclerview.RecyclerAdapterWithHF;
 import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseActivity;
 import com.ricky.happyes.bean.MyMessageListBean;
+import com.ricky.happyes.util.ToastUtils;
 import com.ricky.happyes.widgets.CustomErrorView;
 
 import java.util.ArrayList;
@@ -135,6 +136,6 @@ public class MyMessageActivity extends BaseActivity<MyMessagePresenter> implemen
 
     @Override
     public void showError(String msg) {
-
+        ToastUtils.toastShort(this, msg);
     }
 }

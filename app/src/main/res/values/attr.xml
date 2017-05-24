@@ -5,4 +5,9 @@
         <attr name="customTime" format="integer" />
         <attr name="customEnableDown" format="boolean" />
     </declare-styleable>
+
+    <!--自定义圆角图片-->
+    <declare-styleable name="CornerImage">
+        <attr name="corner" format="dimension" />
+    </declare-styleable>
 </resources>

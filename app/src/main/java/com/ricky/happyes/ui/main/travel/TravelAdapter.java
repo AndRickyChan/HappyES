@@ -1,4 +1,4 @@
-package com.ricky.happyes.ui.main.home;
+package com.ricky.happyes.ui.main.travel;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -18,17 +18,17 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 最热景点适配器
- * Created by Ricky on 2017-4-19.
+ * 旅行item适配器
+ * Created by Ricky on 2017-5-24.
  */
 
-public class HotTravelAdapter extends RecyclerView.Adapter<HotTravelAdapter.ViewHolder> {
+public class TravelAdapter extends RecyclerView.Adapter {
 
     private Context mContext;
     private List<TravelBean> mAllDatas;
     private LayoutInflater mLayoutInflater;
 
-    public HotTravelAdapter(Context mContext, List<TravelBean> mAllDatas) {
+    public TravelAdapter(Context mContext, List<TravelBean> mAllDatas) {
         this.mContext = mContext;
         this.mAllDatas = mAllDatas;
         mLayoutInflater = LayoutInflater.from(mContext);
@@ -36,21 +36,24 @@ public class HotTravelAdapter extends RecyclerView.Adapter<HotTravelAdapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(mLayoutInflater.inflate(R.layout.item_hot_travel, parent, false));
+        return new ViewHolder(mLayoutInflater.inflate(R.layout.item_travel, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        TravelBean bean = mAllDatas.get(position);
-        ImageUtils.getInstance().loadHotTravelItemImage(mContext, bean.getTravel_logo(), holder.mLogo);
-        holder.mTitle.setText(bean.getTravel_title());
-        holder.mContent.setText(bean.getTravel_des());
-        holder.mGoodPoint.setText(String.valueOf(bean.getGood_point()));
-        holder.mPrice.setText(String.valueOf(bean.getTravel_price()));
-        if (position == mAllDatas.size() - 1) {
-            holder.divider.setVisibility(View.GONE);
-        } else {
-            holder.divider.setVisibility(View.VISIBLE);
+    public void onBindViewHolder(RecyclerView.ViewHolder holder1, int position) {
+        if (holder1 instanceof ViewHolder) {
+            ViewHolder holder = (ViewHolder) holder1;
+            TravelBean bean = mAllDatas.get(position);
+            ImageUtils.getInstance().loadHotTravelItemImage(mContext, bean.getTravel_logo(), holder.mLogo);
+            holder.mTitle.setText(bean.getTravel_title());
+            holder.mContent.setText(bean.getTravel_des());
+            holder.mGoodPoint.setText(String.valueOf(bean.getGood_point()));
+            holder.mPrice.setText(String.valueOf(bean.getTravel_price()));
+            if (position == mAllDatas.size() - 1) {
+                holder.divider.setVisibility(View.GONE);
+            } else {
+                holder.divider.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -60,6 +63,7 @@ public class HotTravelAdapter extends RecyclerView.Adapter<HotTravelAdapter.View
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
+
         @BindView(R.id.iv_one_day_scenc)
         ImageView mLogo;
         @BindView(R.id.tv_one_day_scenc_title)

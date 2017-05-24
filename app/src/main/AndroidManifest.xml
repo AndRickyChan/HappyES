@@ -37,7 +37,7 @@
             android:label="@string/title_feed_back" />
         <!--我的消息-->
         <activity
-            android:name=".ui.mine.mymsg.MyMessageActivity"
+            android:name=".ui.mine.msg.MyMessageActivity"
             android:label="@string/menu_left_navigation_my_message" />
         <!--登录-->
         <activity

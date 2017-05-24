@@ -1,4 +1,4 @@
-package com.ricky.happyes.ui.mine.mymsg;
+package com.ricky.happyes.ui.mine.msg;
 
 import android.content.Context;
 import android.os.Handler;
