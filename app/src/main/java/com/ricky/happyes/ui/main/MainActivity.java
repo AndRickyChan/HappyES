@@ -19,8 +19,8 @@ import android.widget.TextView;
 import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseActivity;
 import com.ricky.happyes.bean.UserBean;
+import com.ricky.happyes.ui.main.food.FoodFragment;
 import com.ricky.happyes.ui.main.home.HomeFragment;
-import com.ricky.happyes.ui.main.notifications.NotificationsFragment;
 import com.ricky.happyes.ui.main.travel.TravelFragment;
 import com.ricky.happyes.ui.mine.msg.MyMessageActivity;
 import com.ricky.happyes.ui.setting.SettingActivity;
@@ -49,7 +49,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements BottomN
     private FragmentManager fragmentManager;
     private HomeFragment homeFragment;
     private TravelFragment travelFragment;
-    private NotificationsFragment notificationsFragment;
+    private FoodFragment foodFragment;
 
     private boolean isSuccess = false;//是否获取个人信息成功
 
@@ -166,8 +166,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements BottomN
             transaction.hide(homeFragment);
         if (travelFragment != null)
             transaction.hide(travelFragment);
-        if (notificationsFragment != null)
-            transaction.hide(notificationsFragment);
+        if (foodFragment != null)
+            transaction.hide(foodFragment);
     }
 
     private void showFragment(FragmentTransaction transaction, int resId) {
@@ -190,11 +190,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements BottomN
                 }
                 break;
             case R.id.bottom_navigation_notifications://公告
-                if (notificationsFragment == null) {
-                    notificationsFragment = new NotificationsFragment();
-                    transaction.add(R.id.main_content, notificationsFragment, "notificationsFragment");
+                if (foodFragment == null) {
+                    foodFragment = new FoodFragment();
+                    transaction.add(R.id.main_content, foodFragment, "notificationsFragment");
                 } else {
-                    transaction.show(notificationsFragment);
+                    transaction.show(foodFragment);
                 }
                 break;
         }

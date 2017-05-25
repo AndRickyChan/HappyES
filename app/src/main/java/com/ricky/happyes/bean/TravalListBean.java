@@ -8,24 +8,33 @@ import java.util.List;
  */
 
 public class TravalListBean {
-    private int code;
-    private String msg;
+    private int total ;
+    private int page;
+    private int count;
     private List<TravelBean> list;
 
-    public int getCode() {
-        return code;
+    public int getTotal() {
+        return total;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setTotal(int total) {
+        this.total = total;
     }
 
-    public String getMsg() {
-        return msg;
+    public int getPage() {
+        return page;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public List<TravelBean> getList() {

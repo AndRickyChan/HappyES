@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_food_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_common_container"
+            android:paddingTop="8dp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_food_daily_tip"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@drawable/bg_common_container"-->
+        <!--android:ellipsize="end"-->
+        <!--android:lineSpacingMultiplier="1.25"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="有福的餐厅在每周六将会做活动，每餐满112元将会送酸奶一份，大家可以过来尝尝..."-->
+        <!--android:textSize="12sp" />-->
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_food_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_food_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_common_container"
+                android:overScrollMode="never" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

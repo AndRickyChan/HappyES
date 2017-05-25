@@ -14,6 +14,6 @@
     <item
         android:id="@+id/bottom_navigation_notifications"
         android:icon="@drawable/ic_bottom_navigation_notification_24dp"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_food" />
 
 </menu>

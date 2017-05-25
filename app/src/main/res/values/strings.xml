@@ -2,7 +2,7 @@
     <string name="app_name">测试</string>
     <string name="title_home">首页</string>
     <string name="title_travel">旅行</string>
-    <string name="title_notifications">公告</string>
+    <string name="title_food">美食</string>
 
     <!--首页-->
     <string name="hint_main_open_toggle">Open Toggle</string>

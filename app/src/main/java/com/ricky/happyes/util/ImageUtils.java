@@ -3,6 +3,7 @@ package com.ricky.happyes.util;
 import android.content.Context;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.ricky.happyes.R;
 import com.ricky.happyes.widgets.imageloader.ImageLoaderUtils;
 import com.ricky.happyes.widgets.imageloader.glide.GlideCircleTransform;
@@ -77,6 +78,33 @@ public class ImageUtils {
                 .placeholder(R.drawable.ic_default_test)
                 .imageView(mImageView)
                 .scaleType(GlideScaleType.CENTER_CROP)
+                .build());
+    }
+
+    /**
+     * 加载美食类型图片
+     */
+    public void loadFoodTypeImage(Context mContext, String url, ImageView mImageView) {
+        mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
+                .url(url)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
+                .transformation(new GlideCircleTransform(mContext))
+                .scaleType(GlideScaleType.CENTER_CROP)
+                .imageView(mImageView)
+                .build());
+    }
+
+    /**
+     * 加载商家列表图片
+     */
+    public void loadShopLogoImage(Context mContext, String url, ImageView mImageView) {
+        mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
+                .url(url)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
+                .scaleType(GlideScaleType.CENTER_CROP)
+                .imageView(mImageView)
                 .build());
     }
 }
