@@ -52,7 +52,7 @@ public class ResetPassActivity extends BaseActivity<ResetPassPresenter> implemen
 
         Observable<CharSequence> newPassObservable = RxTextView.textChanges(mEtNewPass);
         Observable<CharSequence> confirmPassObservable = RxTextView.textChanges(mEtConfirmPass);
-        Observable.combineLatest(newPassObservable, confirmPassObservable, new Func2<CharSequence, CharSequence, Boolean>() {
+        subscription = Observable.combineLatest(newPassObservable, confirmPassObservable, new Func2<CharSequence, CharSequence, Boolean>() {
             @Override
             public Boolean call(CharSequence newPass, CharSequence confirmPass) {
                 return mPresenter.isNewPassValidate(newPass.toString())
@@ -90,5 +90,13 @@ public class ResetPassActivity extends BaseActivity<ResetPassPresenter> implemen
         String newPass = mEtNewPass.getText().toString().trim();
         String confirmPass = mEtConfirmPass.getText().toString().trim();
         mPresenter.resetPassword(this, newPass, confirmPass);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (subscription.isUnsubscribed()) {
+            subscription.unsubscribe();
+        }
     }
 }
