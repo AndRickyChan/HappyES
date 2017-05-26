@@ -55,6 +55,10 @@
         <activity
             android:name=".ui.resetpass.ResetPassActivity"
             android:label="@string/title_reset_pass" />
+        <!--我的收藏-->
+        <activity
+            android:name=".ui.mine.collection.MyCollectionActivity"
+            android:label="@string/title_my_collection" />
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ public class CodePresenter extends RxPresenter<CodeContract.View> implements Cod
             mView.showError("请填写正确的手机号码");
             return;
         }
-        Subscription subscription = RetrofitHelper.getInstance(mContext).getVerificationCode(phone, String.valueOf(type))
+        /*Subscription subscription = RetrofitHelper.getInstance(mContext).getVerificationCode(phone, String.valueOf(type))
                 .compose(RxUtils.handleResult())
                 .compose(RxUtils.rxSchedulerHelper())
                 .subscribe(new RxSubscribe<NullBean>(mContext) {
@@ -42,12 +42,13 @@ public class CodePresenter extends RxPresenter<CodeContract.View> implements Cod
                         mView.showError(message);
                     }
                 });
-        addSubscription(subscription);
+        addSubscription(subscription);*/
+        mView.onGetCodeSuccess();
     }
 
     @Override
     public void verifyCode(Context mContext, String phone, int type, String code) {
-        Subscription subscription = RetrofitHelper.getInstance(mContext)
+        /*Subscription subscription = RetrofitHelper.getInstance(mContext)
                 .verifiCode(phone, String.valueOf(type), code)
                 .compose(RxUtils.rxSchedulerHelper())
                 .compose(RxUtils.handleResult())
@@ -62,7 +63,8 @@ public class CodePresenter extends RxPresenter<CodeContract.View> implements Cod
                         mView.showError(message);
                     }
                 });
-        addSubscription(subscription);
+        addSubscription(subscription);*/
+        mView.onVerifySuccess();
     }
 
     @Override

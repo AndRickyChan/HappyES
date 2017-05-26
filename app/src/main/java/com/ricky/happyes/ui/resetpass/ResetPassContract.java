@@ -1,5 +1,7 @@
 package com.ricky.happyes.ui.resetpass;
 
+import android.content.Context;
+
 import com.ricky.happyes.base.BasePresenter;
 import com.ricky.happyes.base.BaseView;
 
@@ -10,10 +12,10 @@ import com.ricky.happyes.base.BaseView;
 interface ResetPassContract {
 
     interface View extends BaseView {
-
+        void onResetSuccess();
     }
 
     interface Presenter extends BasePresenter {
-
+        void resetPassword(Context mContext,String newPass,String confirmPass);
     }
 }

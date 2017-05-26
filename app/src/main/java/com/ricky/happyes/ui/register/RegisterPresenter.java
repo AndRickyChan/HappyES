@@ -35,7 +35,7 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
 
     @Override
     public void register(Context mContext, String phone, String nickname, String password) {
-        Subscription subscription = RetrofitHelper.getInstance(mContext)
+        /*Subscription subscription = RetrofitHelper.getInstance(mContext)
                 .register(phone, nickname, password)
                 .compose(RxUtils.rxSchedulerHelper())
                 .compose(RxUtils.handleResult())
@@ -50,6 +50,7 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
                         mView.onRegisterSuccess();
                     }
                 });
-        addSubscription(subscription);
+        addSubscription(subscription);*/
+        mView.onRegisterSuccess();
     }
 }

@@ -22,6 +22,7 @@ import com.ricky.happyes.bean.UserBean;
 import com.ricky.happyes.ui.main.food.FoodFragment;
 import com.ricky.happyes.ui.main.home.HomeFragment;
 import com.ricky.happyes.ui.main.travel.TravelFragment;
+import com.ricky.happyes.ui.mine.collection.MyCollectionActivity;
 import com.ricky.happyes.ui.mine.msg.MyMessageActivity;
 import com.ricky.happyes.ui.setting.SettingActivity;
 import com.ricky.happyes.util.AppManager;
@@ -117,9 +118,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements BottomN
                 showFragment(transaction, R.id.bottom_navigation_notifications);
                 return true;
             //左侧导航点击
-            case R.id.menu_my_attention://我的关注
+            case R.id.menu_my_attention://我的收藏
                 mDrawerLayout.closeDrawers();
-
+                startActivity(new Intent(this, MyCollectionActivity.class));
                 return true;
             case R.id.menu_my_route://我的线路
                 mDrawerLayout.closeDrawers();

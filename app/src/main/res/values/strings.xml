@@ -7,7 +7,7 @@
     <!--首页-->
     <string name="hint_main_open_toggle">Open Toggle</string>
     <string name="hint_main_close_toggle">Close Toggle</string>
-    <string name="menu_left_navigation_my_attention">我的关注</string>
+    <string name="menu_left_navigation_my_attention">我的收藏</string>
     <string name="menu_left_navigation_my_route">我的线路</string>
     <string name="menu_left_navigation_my_message">我的消息</string>
     <string name="menu_left_navigation_system_message">系统消息</string>
@@ -69,5 +69,15 @@
     <string name="btn_register_now">立即注册</string>
 
     <!--重置密码-->
-    <string name="title_reset_pass">重置密码</string>
+    <string name="title_reset_pass">新密码</string>
+    <string name="et_new_pass_tip">新密码：</string>
+    <string name="et_confirm_pass_tip">确认密码：</string>
+    <string name="btn_reset_now">立即重置</string>
+    <string name="hint_new_pass">请设置新密码</string>
+    <string name="hint_confirm_pass">请确认新密码</string>
+    <string name="dialog_reset_content">您的密码已重置,请使用新密码登录</string>
+    <string name="dialog_reset_sure">确定</string>
+    <string name="tip_password">密码为长度6~18位的字母和数字的组合</string>
+    <!--我的收藏-->
+    <string name="title_my_collection">我的收藏</string>
 </resources>
