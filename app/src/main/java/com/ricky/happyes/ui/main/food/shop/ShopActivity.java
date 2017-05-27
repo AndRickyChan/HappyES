@@ -3,6 +3,7 @@ package com.ricky.happyes.ui.main.food.shop;
 import android.content.Context;
 import android.support.design.widget.CheckableImageButton;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +19,7 @@ import com.ricky.happyes.util.ToastUtils;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * 店铺详情
@@ -37,7 +39,7 @@ public class ShopActivity extends BaseActivity<ShopPresenter> implements ShopCon
     @BindView(R.id.cib_collection)
     CheckableImageButton mCibCollection;
     @BindView(R.id.tv_shop_star)
-    TextView mStar;
+    AppCompatRatingBar mStar;
     @BindView(R.id.tv_shop_average_price)
     TextView mAveragePrice;
     @BindView(R.id.tv_shop_location)
@@ -98,8 +100,13 @@ public class ShopActivity extends BaseActivity<ShopPresenter> implements ShopCon
 
     @Override
     public void onCommentListSuccess(List<ShopCommentBean> list) {
-        mRecyclerComment.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
-        ShopCommentAdapter mAdapter = new ShopCommentAdapter(mContext,list);
+        mRecyclerComment.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
+        ShopCommentAdapter mAdapter = new ShopCommentAdapter(mContext, list);
         mRecyclerComment.setAdapter(mAdapter);
+    }
+
+    @OnClick(R.id.cib_collection)
+    public void onCollectionClicked() {
+        mCibCollection.setChecked(!mCibCollection.isChecked());
     }
 }

@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.food.shop;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +45,7 @@ public class ShopCommentAdapter extends RecyclerView.Adapter<ShopCommentAdapter.
         ShopCommentBean bean = list.get(position);
         ImageUtils.getInstance().loadPortraitHeader(mContext, bean.getUser_header(), holder.userHeader);
         holder.userName.setText(bean.getUser_name());
-        holder.commentStar.setText(bean.getStar_count() + "星");
+        holder.commentStar.setRating(bean.getStar_count());
         holder.commentTime.setText(bean.getComment_time());
         holder.commentContent.setText(bean.getComment());
     }
@@ -60,7 +61,7 @@ public class ShopCommentAdapter extends RecyclerView.Adapter<ShopCommentAdapter.
         @BindView(R.id.tv_user_name)
         TextView userName;
         @BindView(R.id.tv_user_star)
-        TextView commentStar;
+        AppCompatRatingBar commentStar;
         @BindView(R.id.tv_comment_time)
         TextView commentTime;
         @BindView(R.id.tv_shop_comment)

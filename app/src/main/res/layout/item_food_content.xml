@@ -48,14 +48,14 @@
                     android:textColor="@color/colorContent"
                     android:textSize="12sp" />
 
-                <TextView
+                <android.support.v7.widget.AppCompatRatingBar
                     android:id="@+id/tv_shop_star"
+                    style="@style/CustomRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="5 星"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="12sp" />
+                    android:numStars="5"
+                    android:rating="3" />
 
                 <TextView
                     android:id="@+id/tv_shop_address"

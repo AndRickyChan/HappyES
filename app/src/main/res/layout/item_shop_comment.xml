@@ -42,13 +42,13 @@
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <android.support.v7.widget.AppCompatRatingBar
                     android:id="@+id/tv_user_star"
+                    style="@style/CustomRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5星"
-                    android:textColor="@color/colorContent"
-                    android:textSize="11sp" />
+                    android:numStars="5"
+                    android:rating="3" />
 
                 <TextView
                     android:id="@+id/tv_comment_time"

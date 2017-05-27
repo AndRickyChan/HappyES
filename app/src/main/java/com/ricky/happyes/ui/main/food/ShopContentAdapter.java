@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.food;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class ShopContentAdapter extends RecyclerView.Adapter {
             ImageUtils.getInstance().loadShopLogoImage(mContext, bean.getShop_logo(), holder.shopLogo);
             holder.shopTitle.setText(bean.getShop_title());
             holder.shopPrice.setText("￥" + bean.getShop_price() + "元/人");
-            holder.shopStar.setText(bean.getShop_star() + " 星");
+            holder.shopStar.setRating(bean.getShop_star());
             holder.shopAddress.setText(bean.getShop_address());
             holder.shopType.setText(bean.getShop_type());
         }
@@ -66,7 +67,7 @@ public class ShopContentAdapter extends RecyclerView.Adapter {
         @BindView(R.id.tv_shop_price)
         TextView shopPrice;
         @BindView(R.id.tv_shop_star)
-        TextView shopStar;
+        AppCompatRatingBar shopStar;
         @BindView(R.id.tv_shop_address)
         TextView shopAddress;
         @BindView(R.id.tv_shop_type)
