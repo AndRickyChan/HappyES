@@ -59,6 +59,10 @@
         <activity
             android:name=".ui.mine.collection.MyCollectionActivity"
             android:label="@string/title_my_collection" />
+        <!--店铺详情-->
+        <activity
+            android:name=".ui.main.food.shop.ShopActivity"
+            android:label="@string/title_shop_detail" />
     </application>
 
 </manifest>

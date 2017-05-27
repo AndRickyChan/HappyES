@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.ricky.happyes.R;
 import com.ricky.happyes.bean.FoodTypeBean;
 import com.ricky.happyes.util.ImageUtils;
+import com.ricky.happyes.widgets.CircleImageView;
 
 import java.util.List;
 
@@ -60,7 +61,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.iv_type_logo)
-        ImageView typeLogo;
+        CircleImageView typeLogo;
         @BindView(R.id.tv_type_name)
         TextView typeName;
 

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:paddingBottom="8dp">
 
-    <ImageView
+    <com.ricky.happyes.widgets.CircleImageView
         android:id="@+id/iv_type_logo"
         android:layout_width="48dp"
         android:layout_height="48dp"

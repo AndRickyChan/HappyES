@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.food;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseFragment;
 import com.ricky.happyes.bean.FoodTypeBean;
 import com.ricky.happyes.bean.ShopListBean;
+import com.ricky.happyes.ui.main.food.shop.ShopActivity;
 import com.ricky.happyes.util.ToastUtils;
 
 import java.util.ArrayList;
@@ -100,6 +102,18 @@ public class FoodFragment extends BaseFragment<FoodPresenter> implements FoodCon
             public void loadMore() {
                 pageIndex++;
                 getFoodContentList(mContext, pageIndex, foodType);
+            }
+        });
+
+        mAdapterHF.setOnItemClickListener(new RecyclerAdapterWithHF.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecyclerAdapterWithHF adapter, RecyclerView.ViewHolder vh, int position) {
+                Intent mIntent = new Intent(mContext, ShopActivity.class);
+                //传递店铺名称，提升界面显示速度
+                mIntent.putExtra(ShopActivity.SHOP_TITLE, mShopListData.get(position).getShop_title());
+                //传递店铺ID,用于获取详情
+                mIntent.putExtra(ShopActivity.SHOP_ID, mShopListData.get(position).getShop_id());
+                startActivity(mIntent);
             }
         });
     }

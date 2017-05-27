@@ -46,7 +46,7 @@ public class FoodPresenter extends RxPresenter<FoodContract.View> implements Foo
                     ShopListBean.ShopBean bean = new ShopListBean().new ShopBean();
                     bean.setShop_id("" + i);
                     bean.setShop_logo("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3548260537,2899382870&fm=23&gp=0.jpg");
-                    bean.setShop_title("家家腊鱼馆");
+                    bean.setShop_title("家家腊鱼馆" + i + "号");
                     bean.setShop_price(16);
                     bean.setShop_star(5);
                     bean.setShop_address("恩施/新天地");

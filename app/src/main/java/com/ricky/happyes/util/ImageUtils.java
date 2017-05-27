@@ -107,4 +107,17 @@ public class ImageUtils {
                 .imageView(mImageView)
                 .build());
     }
+
+    /**
+     * 加载商家列表图片
+     */
+    public void loadMealLogoImage(Context mContext, String url, ImageView mImageView) {
+        mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
+                .url(url)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
+                .scaleType(GlideScaleType.CENTER_CROP)
+                .imageView(mImageView)
+                .build());
+    }
 }

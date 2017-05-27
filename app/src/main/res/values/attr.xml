@@ -6,8 +6,11 @@
         <attr name="customEnableDown" format="boolean" />
     </declare-styleable>
 
-    <!--自定义圆角图片-->
-    <declare-styleable name="CornerImage">
-        <attr name="corner" format="dimension" />
+    <!--圆形图片显示器-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
     </declare-styleable>
 </resources>
