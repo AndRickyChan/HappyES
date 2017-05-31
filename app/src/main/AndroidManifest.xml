@@ -63,6 +63,14 @@
         <activity
             android:name=".ui.main.food.shop.ShopActivity"
             android:label="@string/title_shop_detail" />
+        <!--更多评论-->
+        <activity
+            android:name=".ui.main.food.comment.ShopCommentActivity"
+            android:label="@string/shop_more_comment_list" />
+        <!--更多套餐-->
+        <activity
+            android:name=".ui.main.food.dining.ShopDiningActivity"
+            android:label="@string/shop_more_dining_list" />
     </application>
 
 </manifest>

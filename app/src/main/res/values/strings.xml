@@ -89,4 +89,6 @@
     <string name="shop_more_dining_meal">点击查看更多套餐</string>
     <string name="shop_all_comment">查看全部评价</string>
     <string name="shop_meal_price">门市价：￥</string>
+    <string name="shop_more_comment_list">更多评论</string>
+    <string name="shop_more_dining_list">更多套餐</string>
 </resources>

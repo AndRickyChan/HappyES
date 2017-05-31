@@ -4,8 +4,9 @@ import android.content.Context;
 
 import com.ricky.happyes.base.BasePresenter;
 import com.ricky.happyes.base.BaseView;
-import com.ricky.happyes.bean.MealBean;
-import com.ricky.happyes.bean.ShopCommentBean;
+import com.ricky.happyes.bean.shopdetail.MealBean;
+import com.ricky.happyes.bean.shopdetail.ShopCommentBean;
+import com.ricky.happyes.bean.shopdetail.ShopDetailBean;
 
 import java.util.List;
 
@@ -18,20 +19,12 @@ public interface ShopContract {
 
     interface View extends BaseView{
 
-
-        void onMealListSuccess(List<MealBean> list);
-
-        void onCommentListSuccess(List<ShopCommentBean> list);
-
+        void onLoadDataSuccess(ShopDetailBean bean);
     }
 
     interface Presenter extends BasePresenter{
 
-        void getMealList(Context mContext,String shopId);
-
-        void getCommentList(Context mContext,String shopId);
-
-        void getCommonData(Context mContext,String shopId);
+        void getShopDetailData(Context mContext,String shopId);
 
     }
 }

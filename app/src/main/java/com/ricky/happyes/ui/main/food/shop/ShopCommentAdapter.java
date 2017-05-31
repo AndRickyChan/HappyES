@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ricky.happyes.R;
-import com.ricky.happyes.bean.ShopCommentBean;
+import com.ricky.happyes.bean.shopdetail.ShopCommentBean;
 import com.ricky.happyes.util.ImageUtils;
 import com.ricky.happyes.widgets.CircleImageView;
 

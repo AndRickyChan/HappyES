@@ -73,15 +73,13 @@
                     style="@style/CustomRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:rating="3" />
+                    android:numStars="5"/>
 
                 <TextView
                     android:id="@+id/tv_shop_average_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="16元/人"
                     android:textColor="@color/colorContent"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -115,7 +113,6 @@
                     android:maxLines="2"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="恩施市沿江路亲水走廊123号恩施市沿江路亲水走廊123号恩施市沿江路亲水走廊123号恩施市沿江路亲水走廊123号"
                     android:textColor="@color/colorContent"
                     android:textSize="10sp" />
 
@@ -200,7 +197,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lineSpacingMultiplier="1.25"
-                    android:text="汉堡  香辣鸡腿堡套餐  薯片  香辣鸡腿堡  鸡肉煲  鸡腿堡  炸鸡啤酒  全家桶"
                     android:textColor="@color/colorContent"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -240,6 +236,7 @@
                     android:overScrollMode="never" />
 
                 <RelativeLayout
+                    android:id="@+id/relative_all_comment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

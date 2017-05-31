@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ricky.happyes.R;
-import com.ricky.happyes.bean.MealBean;
+import com.ricky.happyes.bean.shopdetail.MealBean;
 import com.ricky.happyes.util.ImageUtils;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.ricky.happyes.bean;
+package com.ricky.happyes.bean.shopdetail;
 
 /**
  * 店铺评价bean
