@@ -156,7 +156,7 @@ public class ShopActivity extends BaseActivity<ShopPresenter> implements ShopCon
     @OnClick(R.id.tv_dining_meal_more)
     public void onAllDiningClicked() {
         Intent mIntent = new Intent(this, ShopDiningActivity.class);
-        mIntent.putExtra(ShopCommentActivity.SHOP_ID, shopId);
+        mIntent.putExtra(ShopDiningActivity.SHOP_ID, shopId);
         startActivity(mIntent);
     }
 
