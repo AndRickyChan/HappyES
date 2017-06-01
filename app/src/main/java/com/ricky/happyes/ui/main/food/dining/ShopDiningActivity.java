@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.food.dining;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,12 +13,15 @@ import com.chanven.lib.cptr.recyclerview.RecyclerAdapterWithHF;
 import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseActivity;
 import com.ricky.happyes.bean.shopdetail.MealBean;
+import com.ricky.happyes.ui.main.food.mealdetail.MealDetailActivity;
 import com.ricky.happyes.util.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+
+import static android.R.id.list;
 
 /**
  * 套餐列表
@@ -74,6 +78,18 @@ public class ShopDiningActivity extends BaseActivity<ShopDiningPresenter> implem
         DiningAdapter mAdapter = new DiningAdapter(this, mAllDining);
         mAdapterHF = new RecyclerAdapterWithHF(mAdapter);
         mRecyclerDiningList.setAdapter(mAdapterHF);
+        /**
+         * 点击进入套餐详情
+         */
+        mAdapterHF.setOnItemClickListener(new RecyclerAdapterWithHF.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecyclerAdapterWithHF adapter, RecyclerView.ViewHolder vh, int position) {
+                Intent mIntent = new Intent(mContext, MealDetailActivity.class);
+                mIntent.putExtra(MealDetailActivity.MEAL_ID, mAllDining.get(position).getMeal_id());
+                mIntent.putExtra(MealDetailActivity.MEAL_TITLE, mAllDining.get(position).getMeal_name());
+                startActivity(mIntent);
+            }
+        });
 
         mSwipeRefresh.post(() -> mSwipeRefreshHelper.autoRefresh());
         mSwipeRefreshHelper.setOnSwipeRefreshListener(new SwipeRefreshHelper.OnSwipeRefreshListener() {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:background="@drawable/view_meal_rule_header" />
+
+    <TextView
+        android:id="@+id/tv_meal_rule_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/colorContent"
+        android:textSize="11sp" />
+</LinearLayout>

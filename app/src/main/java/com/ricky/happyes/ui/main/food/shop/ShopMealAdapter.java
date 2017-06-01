@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.food.shop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.ricky.happyes.R;
 import com.ricky.happyes.bean.shopdetail.MealBean;
+import com.ricky.happyes.ui.main.food.mealdetail.MealDetailActivity;
 import com.ricky.happyes.util.ImageUtils;
 
 import java.util.List;
@@ -69,6 +71,19 @@ public class ShopMealAdapter extends RecyclerView.Adapter<ShopMealAdapter.ViewHo
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            /**
+             * 点击进入详情
+             */
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent mIntent = new Intent(mContext, MealDetailActivity.class);
+                    mIntent.putExtra(MealDetailActivity.MEAL_ID, list.get(getAdapterPosition()).getMeal_id());
+                    mIntent.putExtra(MealDetailActivity.MEAL_TITLE, list.get(getAdapterPosition()).getMeal_name());
+                    mContext.startActivity(mIntent);
+                }
+            });
         }
     }
 }

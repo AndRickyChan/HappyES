@@ -71,6 +71,10 @@
         <activity
             android:name=".ui.main.food.dining.ShopDiningActivity"
             android:label="@string/shop_more_dining_list" />
+        <!--套餐详情-->
+        <activity
+            android:name=".ui.main.food.mealdetail.MealDetailActivity"
+            android:label="@string/title_meal_detail" />
     </application>
 
 </manifest>

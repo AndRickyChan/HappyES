@@ -91,4 +91,14 @@
     <string name="shop_meal_price">门市价：￥</string>
     <string name="shop_more_comment_list">更多评论</string>
     <string name="shop_more_dining_list">更多套餐</string>
+
+    <!--套餐详情-->
+    <string name="title_meal_detail">套餐详情</string>
+    <string name="meal_detail_price">￥</string>
+    <string name="meal_detail_predate_now">立即预定</string>
+    <string name="meal_detail_dining">套餐</string>
+    <string name="meal_predate_need_know">预定须知</string>
+    <string name="meal_work_date">有效期：</string>
+    <string name="meal_use_time">使用时间：</string>
+    <string name="meal_use_rule">使用规则：</string>
 </resources>

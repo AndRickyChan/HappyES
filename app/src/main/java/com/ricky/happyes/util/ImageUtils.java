@@ -133,4 +133,17 @@ public class ImageUtils {
                 .imageView(mImageView)
                 .build());
     }
+
+    /**
+     * 加载套餐背景图片
+     */
+    public void loadMealBgLogoImage(Context mContext, String url, ImageView mImageView) {
+        mImageLoaderUtils.loadImage(mContext, new GlideImageConfig.Builder()
+                .url(url)
+                .errorImage(R.drawable.ic_default_test)
+                .placeholder(R.drawable.ic_default_test)
+                .scaleType(GlideScaleType.CENTER_CROP)
+                .imageView(mImageView)
+                .build());
+    }
 }

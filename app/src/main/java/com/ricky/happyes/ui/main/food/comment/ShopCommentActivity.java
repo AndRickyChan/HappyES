@@ -34,7 +34,7 @@ public class ShopCommentActivity extends BaseActivity<ShopCommentPresenter> impl
     @BindView(R.id.swipe_comment_list)
     SwipeRefreshLayout mSwipeRefresh;
     @BindView(R.id.recycler_comment_list)
-    RecyclerView mRecyclerCommmentList;
+    RecyclerView mRecyclerCommentList;
 
     private SwipeRefreshHelper mSwipeHelper;
     private RecyclerAdapterWithHF mAdapterHF;
@@ -69,10 +69,10 @@ public class ShopCommentActivity extends BaseActivity<ShopCommentPresenter> impl
         mSwipeRefresh.setColorSchemeColors(getResources().getColor(R.color.colorPrimary));
         mSwipeHelper = new SwipeRefreshHelper(mSwipeRefresh);
 
-        mRecyclerCommmentList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        mRecyclerCommentList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         CommentAdapter mAdapter = new CommentAdapter(this, mAllComments);
         mAdapterHF = new RecyclerAdapterWithHF(mAdapter);
-        mRecyclerCommmentList.setAdapter(mAdapterHF);
+        mRecyclerCommentList.setAdapter(mAdapterHF);
 
         mSwipeRefresh.post(() -> mSwipeHelper.autoRefresh());
 
