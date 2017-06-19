@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">测试</string>
+    <string name="app_name">快乐恩施</string>
     <string name="title_home">首页</string>
     <string name="title_travel">旅行</string>
     <string name="title_food">美食</string>
@@ -101,4 +101,11 @@
     <string name="meal_work_date">有效期：</string>
     <string name="meal_use_time">使用时间：</string>
     <string name="meal_use_rule">使用规则：</string>
+
+    <!--景点详情-->
+    <string name="title_travel_detail">景点详情</string>
+    <string name="tv_travel_price">门票</string>
+    <string name="tv_travel_advice">入园参考</string>
+    <string name="tv_travel_price_logo">￥</string>
+    <string name="tv_travel_price_up">起</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.travel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import com.chanven.lib.cptr.recyclerview.RecyclerAdapterWithHF;
 import com.ricky.happyes.R;
 import com.ricky.happyes.base.BaseFragment;
 import com.ricky.happyes.bean.TravelBean;
+import com.ricky.happyes.ui.main.travel.detail.TravelDetailActivity;
 import com.ricky.happyes.util.ToastUtils;
 import com.ricky.happyes.widgets.CustomErrorView;
 
@@ -79,6 +81,16 @@ public class TravelFragment extends BaseFragment<TravelPresenter> implements Tra
             public void loadMore() {
                 pageIndex++;
                 mPresenter.getTravelList(mContext, pageIndex, PAGE_SIZE);
+            }
+        });
+        //item点击事件
+        mAdapterHF.setOnItemClickListener(new RecyclerAdapterWithHF.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecyclerAdapterWithHF adapter, RecyclerView.ViewHolder vh, int position) {
+                Intent mIntent = new Intent(mContext, TravelDetailActivity.class);
+                mIntent.putExtra(TravelDetailActivity.TRAVEL_ID, mAllDatas.get(position).getTravel_id());
+                mIntent.putExtra(TravelDetailActivity.TRAVEL_TITLE, mAllDatas.get(position).getTravel_title());
+                startActivity(mIntent);
             }
         });
     }

@@ -75,6 +75,10 @@
         <activity
             android:name=".ui.main.food.mealdetail.MealDetailActivity"
             android:label="@string/title_meal_detail" />
+        <!--景点详情-->
+        <activity
+            android:name=".ui.main.travel.detail.TravelDetailActivity"
+            android:label="@string/title_travel_detail" />
     </application>
 
 </manifest>

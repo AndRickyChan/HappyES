@@ -1,6 +1,7 @@
 package com.ricky.happyes.ui.main.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.ricky.happyes.R;
 import com.ricky.happyes.bean.TravelBean;
+import com.ricky.happyes.ui.main.travel.detail.TravelDetailActivity;
 import com.ricky.happyes.util.ImageUtils;
 
 import java.util.List;
@@ -76,6 +78,16 @@ public class HotTravelAdapter extends RecyclerView.Adapter<HotTravelAdapter.View
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent mIntent = new Intent(mContext, TravelDetailActivity.class);
+                    mIntent.putExtra(TravelDetailActivity.TRAVEL_ID, mAllDatas.get(getAdapterPosition()).getTravel_id());
+                    mIntent.putExtra(TravelDetailActivity.TRAVEL_TITLE, mAllDatas.get(getAdapterPosition()).getTravel_title());
+                    mContext.startActivity(mIntent);
+                }
+            });
         }
     }
 }

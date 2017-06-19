@@ -45,7 +45,7 @@ public class MealDetailPresenter extends RxPresenter<MealDetailContract.View> im
     @Override
     public void getMealMenuData(Context mContext, String mealId) {
         List<MealMenuBean> mAllData = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             List<MealMenuContentBean> tempList = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
                 MealMenuContentBean content = new MealMenuContentBean("葫芦娃" + j + "号", j + "份", j + 2f, false);
